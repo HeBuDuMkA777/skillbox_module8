@@ -26,3 +26,12 @@ print('Задача 2. Долги')
 # Сколько должны? 5000
 
 # Общая сумма долга: 6000
+
+deptors = int(input("Введите количество должников: "))
+total_debt = 0
+step = 5
+for deptor in range(0,deptors, step):
+    print("Должник с номером", deptor)
+    dept = int(input("Сколько должны? "))
+    total_debt += dept
+print("Общая сумма долга:", total_debt)
