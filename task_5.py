@@ -26,3 +26,12 @@ print('Задача 5. Стипендия')
 # 9-й месяц: траты 15197 рублей, не хватает 5197 рублей.
 # 10-й месяц: траты 15652 рублей, не хватает 5652 рублей.
 # Сумма денег, которую необходимо получить у родителей: 37544 рублей.
+
+educational_grant = int(input("Введите ежемесячную стипендию: "))
+expenses = int(input("Введите ежемесячные расходы: "))
+need_money = 0
+for month in range(1, 11):
+    print(month, "-й месяц: траты ", expenses, " рублей, не хватает ", expenses - educational_grant, " рублей.", sep = "")
+    need_money += expenses - educational_grant
+    expenses += int(expenses /100 * 3)
+print("Сумма денег, которую необходимо получить у родителей:", need_money, "рублей.")    
