@@ -30,3 +30,14 @@ print('Задача 4. Функция')
 # В точке 0 функция равна 1
 # В точке −1 функция равна 6
 # В точке −2 функция равна 9
+
+start = int(input("Введите начало отрезка: "))
+stop = int(input("Введите конец отрезка: "))
+step = int(input("Введите шаг: "))
+if start < stop:
+    stop, start = start, stop
+if step > 0:
+    step *= -1
+for point in range(start, stop - 1, step):
+    func = point**3 + 2 * point**2 - 4 * point + 1
+    print("В точке", point, "функция равна", func)
